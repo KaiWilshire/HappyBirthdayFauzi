@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08090e" />
+    <title>A little birthday story</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app" aria-live="polite">
+      <section class="scene scene-intro is-active" id="intro" aria-labelledby="intro-title">
+        <div class="sky-dots" aria-hidden="true"></div>
+        <div class="intro-copy">
+          <p class="eyebrow">a tiny story for <span data-girlfriend-name>you</span></p>
+          <h1 id="intro-title" class="sr-only">A birthday story</h1>
+          <p class="intro-whisper">Hey<span class="blink">_</span></p>
+        </div>
+
+        <button class="scene-hit-area" id="begin-button" type="button" aria-label="Start the birthday story">
+          <span class="pixel-stage intro-stage">
+            <span class="pixel-shadow"></span>
+            <span class="pixel-girl dancing" aria-hidden="true">
+              <span class="hijab hijab-back"></span>
+              <span class="head"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="mouth"></i></span>
+              <span class="hijab hijab-front"></span><span class="hijab-fold"></span>
+              <span class="neck"></span>
+              <span class="torso dress"></span>
+              <span class="arm arm-left"></span><span class="arm arm-right"></span>
+              <span class="leg leg-left"></span><span class="leg leg-right"></span>
+              <span class="shoe shoe-left"></span><span class="shoe shoe-right"></span>
+            </span>
+            <span class="floor-line"></span>
+          </span>
+          <span class="tap-note">tap her <span class="sparkle">✦</span></span>
+        </button>
+
+        <div class="corner-note">01 / 03</div>
+        <p class="interaction-hint">click anywhere to continue</p>
+      </section>
+
+      <section class="scene scene-birthday" id="birthday" aria-labelledby="birthday-heading" aria-hidden="true">
+        <div class="birthday-backdrop" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="birthday-topline"><span>LEVEL 02</span><span>♥</span></div>
+        <div class="birthday-stage">
+          <div class="arrival-character" aria-label="You carrying a birthday cake">
+            <span class="pixel-boy" aria-hidden="true">
+              <span class="boy-hair"></span><span class="boy-head"><i></i><i></i><b></b></span>
+              <span class="boy-body"></span><span class="boy-arm"></span><span class="boy-leg boy-leg-left"></span><span class="boy-leg boy-leg-right"></span>
+            </span>
+            <span class="cake" aria-hidden="true"><i class="cake-flame"></i><i class="cake-candle"></i><i class="cake-candle second"></i><b></b></span>
+          </div>
+          <span class="pixel-girl birthday-girl" aria-hidden="true">
+            <span class="hijab hijab-back"></span><span class="head"><i class="eye eye-left"></i><i class="eye eye-right"></i><i class="mouth"></i></span><span class="hijab hijab-front"></span><span class="hijab-fold"></span>
+            <span class="neck"></span><span class="torso dress"></span><span class="arm arm-left"></span><span class="arm arm-right"></span><span class="leg leg-left"></span><span class="leg leg-right"></span><span class="shoe shoe-left"></span><span class="shoe shoe-right"></span>
+          </span>
+          <span class="floor-line"></span>
+        </div>
+        <div class="birthday-copy" id="birthday-copy" aria-live="polite">
+          <p class="dialogue-label">✦ a message for <span data-girlfriend-name>you</span> ✦</p>
+          <h2 id="birthday-heading" class="birthday-heading"><span>HAPPY</span><span>BIRTHDAY</span></h2>
+          <p class="birthday-message">another year of you...<br />and somehow, I get to be part of it.</p>
+          <button class="continue-button" id="memories-button" type="button">one more thing <span>→</span></button>
+        </div>
+        <div class="corner-note">02 / 03</div>
+      </section>
+
+      <section class="scene scene-memories" id="memories" aria-labelledby="memories-heading" aria-hidden="true">
+        <header class="memory-header">
+          <p class="eyebrow">the little things</p>
+          <h2 id="memories-heading">One year.</h2>
+          <p>So many little moments.<br />Some loud. Some quiet.<br />Some completely ordinary.</p>
+          <div class="header-rule"><span>♥</span></div>
+        </header>
+        <div class="memory-wall" id="memory-wall" aria-label="Memories from the last year"></div>
+        <footer class="memory-footer">
+          <p class="footer-kicker">and somehow, those are the ones I remember the most.</p>
+          <h2>Happy Birthday, <span data-girlfriend-name>my love</span>.</h2>
+          <p>Here’s to another year of memories with you.</p>
+          <button class="replay-button" id="replay-button" type="button">play it again ↺</button>
+        </footer>
+        <div class="corner-note">03 / 03</div>
+      </section>
+    </main>
+
+    <audio id="birthday-audio" loop preload="none"></audio>
+    <button class="music-toggle" id="music-toggle" type="button" aria-label="Toggle background music" hidden>♫</button>
+    <script src="app.js"></script>
+  </body>
+</html>
